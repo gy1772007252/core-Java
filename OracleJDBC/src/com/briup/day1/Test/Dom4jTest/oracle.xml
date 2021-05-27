@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oracle>
+    <driverClass>oracle.jdbc.driver.OracleDriver</driverClass>
+    <url>jdbc:oracle:thin:@127.0.0.1:1521:XE</url>
+    <user>briup</user>
+    <password>briup</password>
+</oracle>

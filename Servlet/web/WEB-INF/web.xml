@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <session-config>
+        <session-timeout>20</session-timeout>
+    </session-config>
+
+    <context-param>
+        <param-name>encoding</param-name>
+        <param-value>UTF-8</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>FirstServlet</servlet-name>
+        <servlet-class>com.briup.service.Servlet.FirstServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FirstServlet</servlet-name>
+        <url-pattern>/FirstServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SecondServlet</servlet-name>
+        <servlet-class>com.briup.service.Servlet.SecondServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SecondServlet</servlet-name>
+        <url-pattern>/SecondServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ThirdServlet</servlet-name>
+        <servlet-class>com.briup.service.Servlet.ThirdServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ThirdServlet</servlet-name>
+        <url-pattern>/ThirdServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FourServlet</servlet-name>
+        <servlet-class>com.briup.service.Servlet.FourServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FourServlet</servlet-name>
+        <url-pattern>/FourServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>life1Servlet</servlet-name>
+        <servlet-class>com.briup.service.life.life1Servlet</servlet-class>
+        <init-param>
+            <param-name>name</param-name>
+            <param-value>张三</param-value>
+        </init-param>
+        <init-param>
+            <param-name>age</param-name>
+            <param-value>20</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>life1Servlet</servlet-name>
+        <url-pattern>/life1Servlet</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>EncodingFilter</filter-name>
+        <filter-class>com.briup.service.filter.EncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>EncodingFilter</filter-name>
+        <url-pattern>*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>autoFilter</filter-name>
+        <filter-class>com.briup.service.form.autoFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>autoFilter</filter-name>
+        <url-pattern>/form/login.jsp</url-pattern>
+    </filter-mapping>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/form/NotFound.html</location>
+    </error-page>
+
+    <error-page>
+        <exception-type>java.lang.NullPointerException</exception-type>
+        <location>/form/error.html</location>
+    </error-page>
+
+</web-app>

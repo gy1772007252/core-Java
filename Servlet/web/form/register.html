@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <base href="http://localhost:8899/FirstServlet_war_exploded/">
+        <title>注册页面</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    </head>
+    <style type="text/css">
+        body{
+            font-size: 20px;
+            font-family: Verdana;
+        }
+        table{
+            background-color: #B4D5FF;
+            margin-left: 100px;
+            line-height: 30px;
+            width: 500px;
+        }
+        .test{
+            border: 1px solid #F3F9FF;
+            border-radius:20px;
+        }
+        .left{
+            width: 170px;
+        }
+        table td{
+            text-align: left;
+        }
+    </style>
+    <body>
+
+    <h1>欢迎注册</h1>
+    <hr>
+    <form action="register" method="post">
+        <table>
+            <tr><td class="left">昵称</td>
+                <td><input class="test" type="text" name="userName"></td></tr>
+            <tr><td>密码</td><td><input class="test" type="password" name="userPwd"></td></tr>
+            <tr><td>再次确认密码</td><td><input class="test" type="password" name="reUserPwd"/></td></tr>
+            <tr><td>性别</td><td><input type="radio" name="gender" value="male"/>男
+                <input type="radio" name="gender" value="female">女</td></tr>
+            <tr><td>邮箱</td><td><input class="test" type="text" name="email"></td></tr>
+            <tr><td>个人爱好</td>
+                <td><input type="checkbox" value="baskball" name="hobby">篮球
+                    <input type="checkbox" value="football" name="hobby">足球
+                    <input type="checkbox" value="chat" name="hobby">聊天
+                    <input type="checkbox" value="music" name="hobby">音乐
+                </td></tr>
+            <tr><td>来自哪里</td>
+                <td><select name="address">
+                    <option value="0">北京</option>
+                    <option value="1">上海</option>
+                    <option value="2">南京</option>
+                    <option value="3">广东</option>
+                </select></td>
+            </tr>
+            <tr><td>备注</td>
+                <td><textarea cols="30" rows="5" class="test" name="info">
+			</textarea></td></tr>
+            <tr><td><input type="reset" value="重置"></td>
+                <td><input type="submit" value="注册"></td></tr>
+        </table>
+    </form>
+
+    </body>
+</html>
