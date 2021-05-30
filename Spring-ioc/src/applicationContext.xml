@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--<context:component-scan base-package="com.briup.ioc"/>-->
+
+    <bean name="husband" class="com.briup.ioc.Husband"
+          p:id="1" p:name="tom" p:salary="2000" p:date-ref="now"/>
+    <bean name="now" class="java.util.Date"></bean>
+
+    <bean name="entity" class="com.briup.ioc.Entity">
+        <property name="myStrs">
+            <array>
+                <value>AAA</value>
+                <value>BBB</value>
+                <value>CCC</value>
+            </array>
+        </property>
+
+        <property name="myList">
+            <list>
+                <value>DDD</value>
+                <value>EEE</value>
+                <value>FFF</value>
+            </list>
+        </property>
+
+        <property name="mySet">
+            <set>
+                <value>GGG</value>
+                <value>KKK</value>
+                <value>LLL</value>
+            </set>
+        </property>
+
+        <property name="myMap">
+            <map>
+                <entry key="name" value="tom"/>
+                <entry key="age">
+                    <value>20</value>
+                </entry>
+            </map>
+        </property>
+
+        <property name="myProps">
+            <props>
+                <prop key="name">tom</prop>
+                <prop key="age">20</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>
