@@ -4,4 +4,5 @@
 ### Oracle JDBC : Some everyday code when I study database;
 ### servlet : Some everyday code when I learn servlets;
 ### MyBatis : Learn some simple code of mybatis;
-### Spring-ioc : Beginner to learn some codes of Spring-ioc.
+### Spring-ioc : Beginner to learn some codes of Spring-ioc;
+### Spring-aop : Beginner to learn some codes of Spring-aop.
