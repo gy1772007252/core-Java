@@ -7,4 +7,5 @@
 ### Spring-ioc : Beginner to learn some codes of Spring-ioc;
 ### Spring-aop : Beginner to learn some codes of Spring-aop;
 ### Spring-jdbc : Beginner to learn some codes of Spring-jdbc;
-### Spring-MyBatis : Beginner to learn some codes of Spring-MyBatis.
+### Spring-MyBatis : Beginner to learn some codes of Spring-MyBatis;
+### Spring-servlet-xml : Beginner to learn some codes of Spring-servlet-xml.
