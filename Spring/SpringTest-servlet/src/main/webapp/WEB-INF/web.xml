@@ -1,0 +1,26 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+
+  <display-name>Archetype Created Web Application</display-name>
+
+  <!-- 配置spring专门读取注解和配置类的容器类型 -->
+  <context-param>
+    <param-name>contextClass</param-name>
+    <param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>
+  </context-param>
+
+  <!-- 配置自定义的spring配置类 -->
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>cn.guyue.config.AppConfig</param-value>
+  </context-param>
+
+  <!-- 配置监听器，启动服务器期间读取配置 -->
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+
+</web-app>
